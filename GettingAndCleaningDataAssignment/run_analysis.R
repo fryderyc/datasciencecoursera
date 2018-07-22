@@ -47,4 +47,4 @@ merged_dataset <- cbind(subject_merged, y_merged, X_merged)
 #     with the average of each variable for each activity and each subject.
 melted <- melt(merged_dataset, id.vars = c("Subject", "ActivityLabel"))
 tidy <- dcast(melted, Subject + ActivityLabel ~ variable, mean)
-write.csv(tidy, "tidy_data.csv", row.names = FALSE)
+write.csv(tidy, "tidy_data.txt", row.names = FALSE)
